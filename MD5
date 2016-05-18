@@ -1,6 +1,7 @@
-44b53ac0141aab904cdd1ec99c03ce20 *DESCRIPTION
+040d422799f9eda24fb2833729890e38 *DESCRIPTION
 16de935ebcebe2420535844d4f6faefc *LICENSE
 e52704005601955eda8df5becf91e493 *NAMESPACE
+6caaf21a82c1abc8be0b03609d2a7a8a *NEWS
 dbc303c83ca80902fa9c4a282c73c54d *R/Ahat.R
 aa5346a3d7c2414d64e815f5a17f977b *R/M_vec.R
 2b37a11512fa1ecf5e88a0609c0ef8d9 *R/PI_0.R
@@ -11,7 +12,7 @@ c3728a678c71b9789e3567a237711667 *R/PI_2.R
 875e43793bc9e237991b2ec10ffc280e *R/dM.R
 973567bdf3dbb308bcf791d3475afe74 *R/findRhoInterval.R
 9f638043e370e1249a935e0f44c2c73e *R/kerneval.R
-10673f712f7e8566b245133c74e13941 *R/kernscr-package.R
+4d372c96f0ea17acd9ecbab3a14893b9 *R/kernscr-package.R
 71cf16180a3f12c61f31555abe07c6dc *R/lambda.R
 c1ce9011d71af5d645c088ca8ccba5d3 *R/plot_kernscr.R
 2b4ff71649b7417173ac384c8022ab83 *R/sim_SCR_data.R
@@ -30,7 +31,7 @@ d4aafbf9f5c868f780640bc5d5ac8b55 *man/compute_all_tests.Rd
 b44554cb4586283d44d67771d652487c *man/dM.Rd
 96522fa8eed40bc31aacb51c30779a27 *man/findRhoInterval.Rd
 b3e8ae420a7e301c15096fd8b51556d8 *man/kernelEval.Rd
-15879939a5405248d0d60107caf3dfed *man/kernscr-package.Rd
+e6c1eeab5d7dc04cd5d1ec0f084a44db *man/kernscr-package.Rd
 6a528c926c6b07c0895181b47762cecb *man/lambda.Rd
 34fd19726017ed81d0a40578e23257cd *man/plot_kernscr.Rd
 2d8d7fee8f92382ba564bc0e20e62237 *man/sim_SCR_data.Rd
