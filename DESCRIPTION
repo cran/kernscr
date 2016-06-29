@@ -1,12 +1,12 @@
 Package: kernscr
 Type: Package
 Title: Kernel Machine Score Test for Semi-Competing Risks
-Version: 1.0.1
-Date: 2016-05-03
-Authors@R: c(person("Boris P.", "Hejblum", role = c("aut", "cre"),
-    email = "bhejblum@hsph.harvard.edu"),
-    person("Matey", "Neykov", role = c("aut"),
+Version: 1.0.3
+Date: 2016-06-28
+Authors@R: c(person("Matey", "Neykov", role = c("aut"),
     email = "mneykov@gmail.com"),
+    person("Boris P.", "Hejblum", role = c("aut", "cre"),
+    email = "bhejblum@hsph.harvard.edu"),
     person("Jennifer A.", "Sinnot", role = c("aut"),
     email = "jsinnott@stat.osu.edu")
     )
@@ -20,9 +20,9 @@ LazyData: TRUE
 BugReports: https://github.com/borishejblum/kernscr/issues
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2016-05-17 20:24:29 UTC; bhejblum
-Author: Boris P. Hejblum [aut, cre],
-  Matey Neykov [aut],
+Packaged: 2016-06-28 13:39:03 UTC; borishejblum
+Author: Matey Neykov [aut],
+  Boris P. Hejblum [aut, cre],
   Jennifer A. Sinnot [aut]
 Repository: CRAN
-Date/Publication: 2016-05-18 01:20:45
+Date/Publication: 2016-06-29 02:29:01
