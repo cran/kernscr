@@ -14,12 +14,12 @@
 #'
 #'@usage data("cancer_pathways")
 #'
-#'@format a list of 70 relevant pathways from an old version of MSigDB c2CP contening the Entrez IDs.
+#'@format a list of 70 relevant pathways from an old version of MSigDB c2CP containing the Entrez IDs.
 #'
 #'@examples
 #'data("cancer_pathways")
 #'
-#'\dontrun{
+#'if(interactive()){
 #'##get the data from Vijver publication
 #'
 #'#clinical data
@@ -83,12 +83,14 @@
 #'unlink("./temp_unzip", recursive=TRUE)
 #'
 #'# translating the pathways from Entrez ID to gene symbol
-#'library(org.Hs.eg.db)
-#'x <- org.Hs.egSYMBOL
-#'mapped_genes <- mappedkeys(x)
-#'xx <- as.list(x[mapped_genes])
-#'cancer_pathways_Symbol <- lapply(cancer_pathways, function(v){unlist(xx[v])})
-#'sapply(cancer_pathways, function(x){length(intersect(x, rownames(BC_dat_exp)))/length(x)})
+#'if (requireNamespace("org.Hs.eg.db", quietly = TRUE)){
+#'  library(org.Hs.eg.db)
+#'  x <- org.Hs.egSYMBOL
+#'  mapped_genes <- mappedkeys(x)
+#'  xx <- as.list(x[mapped_genes])
+#'  cancer_pathways_Symbol <- lapply(cancer_pathways, function(v){unlist(xx[v])})
+#'  sapply(cancer_pathways, function(x){length(intersect(x, rownames(BC_dat_exp)))/length(x)})
+#' }
 #'}
 #'
 #' @keywords datasets

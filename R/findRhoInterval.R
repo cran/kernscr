@@ -1,4 +1,4 @@
-#' Find an interval contraining the rho parameter for a non linear kernel
+#' Find an interval constraining the rho parameter for a non linear kernel
 #'
 #'@param tZ a \code{P x N} matrix of genomic covariates (i.e., the usual data array Z transposed)
 #'
@@ -16,11 +16,11 @@
 #'@param pca_thres a number between \code{0} and \code{1} giving the threshold to be used for PCA.
 #'Default is \code{0.9}. If \code{NULL}, no PCA is performed.
 #'
-#'@param warning_suppress logical flag. Indicating wether the warnings should be suppress during
+#'@param warning_suppress logical flag. Indicating whether the warnings should be suppress during
 #'the linear model fitting step. Default is \code{TRUE}. See details.
 #'
 #'@details This function will print \code{rho_init} range and the range of valid tuning parameters.
-#'If that range butts up against either the upper or lower bound of rho_init, you can rerun this function
+#'If that range butts up against either the upper or lower bound of \code{rho_init}, you can rerun this function
 #'with a bigger \code{rho_init}.
 #'
 #'Finding the right tuning parameters includes a step of fitting a linear model which can fail
@@ -49,7 +49,7 @@
 #'my_rho_init <- seq(0.01, 20, length=300)*length(ind_gene)
 #'range(my_rho_init)
 #'
-#'\dontrun{
+#'if(interactive()){
 #'# compute the interval for rho
 #'rho_set <- findRhoInterval(tZ=t(mydata[,ind_gene]), rho_init = my_rho_init, kernel="gaussian")
 #'rho_set

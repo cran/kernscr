@@ -5,7 +5,7 @@
 \alias{cancer_pathways}
 \alias{vijver}
 \title{70 pathways from MSigDB c2CP}
-\format{a list of 70 relevant pathways from an old version of MSigDB c2CP contening the Entrez IDs.}
+\format{a list of 70 relevant pathways from an old version of MSigDB c2CP containing the Entrez IDs.}
 \usage{
 data("cancer_pathways")
 }
@@ -15,7 +15,7 @@ data("cancer_pathways")
 \examples{
 data("cancer_pathways")
 
-\dontrun{
+if(interactive()){
 ##get the data from Vijver publication
 
 #clinical data
@@ -79,12 +79,14 @@ BC_dat_exp_all <- cbind.data.frame("SYMBOL"=gene_symbol, BC_dat_exp[,  BC_dat_cl
 unlink("./temp_unzip", recursive=TRUE)
 
 # translating the pathways from Entrez ID to gene symbol
-library(org.Hs.eg.db)
-x <- org.Hs.egSYMBOL
-mapped_genes <- mappedkeys(x)
-xx <- as.list(x[mapped_genes])
-cancer_pathways_Symbol <- lapply(cancer_pathways, function(v){unlist(xx[v])})
-sapply(cancer_pathways, function(x){length(intersect(x, rownames(BC_dat_exp)))/length(x)})
+if (requireNamespace("org.Hs.eg.db", quietly = TRUE)){
+ library(org.Hs.eg.db)
+ x <- org.Hs.egSYMBOL
+ mapped_genes <- mappedkeys(x)
+ xx <- as.list(x[mapped_genes])
+ cancer_pathways_Symbol <- lapply(cancer_pathways, function(v){unlist(xx[v])})
+ sapply(cancer_pathways, function(x){length(intersect(x, rownames(BC_dat_exp)))/length(x)})
+}
 }
 
 }
@@ -98,4 +100,3 @@ Significance of Multiple Genetic Markers for Risk Prediction, \emph{Biometrics},
 67(3):975-986, 2011.
 }
 \keyword{datasets}
-
